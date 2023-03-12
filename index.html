@@ -9,11 +9,18 @@
 <body>
 <audio id="my-audio" src="heartbeat.mp3" loop></audio>
   <script>
-			var audio = document.getElementById("my-audio");
-			
-			document.addEventListener("click", function() {
-				audio.play();
-			});
+	var flag=true;
+	var audio = document.getElementById("my-audio");
+	document.addEventListener("click", function() {
+		if(flag){
+			audio.play();
+          		flag=false;
+      		}else{
+			audio.pause();
+        		audio.currentTime = 0;
+        		flag=true;
+		}
+	});
 		</script>
   <script src='three.min.js'></script>
 <script src='MeshSurfaceSampler.js'></script>
