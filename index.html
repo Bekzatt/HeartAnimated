@@ -7,9 +7,14 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-
-<!-- partial -->
+<audio id="my-audio" src="heartbeat.mp3" loop></audio>
+  <script>
+			var audio = document.getElementById("my-audio");
+			
+			document.addEventListener("click", function() {
+				audio.play();
+			});
+		</script>
   <script src='three.min.js'></script>
 <script src='MeshSurfaceSampler.js'></script>
 <script src='TrackballControls.js'></script>
