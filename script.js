@@ -64,7 +64,7 @@ class Grass {
   }
   update (a) {
     const noise = simplex.noise4D(this.pos.x*1.5, this.pos.y*1.5, this.pos.z*1.5, a * 0.0005) + 1;
-    this.one = this.pos.clone().multiplyScalar(1.01 + (noise * 0.15 * beat.a));
+    this.one = this.pos.clone().multiplyScalar(1.41 + (noise * 0.15 * beat.a));
     this.two = this.one.clone().add(this.one.clone().setLength(this.scale));
   }
 }
